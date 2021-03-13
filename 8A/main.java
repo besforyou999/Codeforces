@@ -20,7 +20,8 @@ public class main {
     forward = checkString(flagColours,firstSight,secondSight);    
 
     char [] temp = flagColours.toCharArray();
-    int left, right = 0;
+    
+	int left, right = 0;
     right = temp.length - 1;
 
     for (left = 0; left < right ; left++, right--) {
@@ -53,17 +54,18 @@ public class main {
   }
 	
   public static boolean checkString( String flagColours, String firstSight , String secondSight) {
-    int sightPtr = 0, forwardFirstCheck = 0, forwardSecondCheck = 0;
-    int firstSightLength = firstSight.length();
-    int secondSightLength = secondSight.length();
+    
+	int sightPtr = 0, forwardFirstCheck = 0, forwardSecondCheck = 0;
+    int firstSightLength = firstSight.length() , secondSightLength = secondSight.length();
 
     while ( sightPtr < flagColours.length() - (firstSightLength - 1) ) {
-      int check = 1;
+      
+	  int check = 1;
+
       for (int i = 0; i < firstSightLength ; i++) {
-        if (flagColours.charAt(sightPtr+i) != firstSight.charAt(i)) {
-          check = 0;
-        }
+        if (flagColours.charAt(sightPtr+i) != firstSight.charAt(i)) { check = 0; }
       }
+
       if (check == 1) {
         forwardFirstCheck = 1;
         break;
@@ -75,11 +77,11 @@ public class main {
 
     while ( sightPtr < flagColours.length() - (secondSightLength - 1) ) {
       int check = 1;
+
       for (int i = 0; i < secondSightLength ; i++) {
-        if (flagColours.charAt(sightPtr+i) != secondSight.charAt(i)) {
-          check = 0;
-        }
+        if (flagColours.charAt(sightPtr+i) != secondSight.charAt(i)) { check = 0; }
       }
+
       if (check == 1) {
         forwardSecondCheck = 1;
         break;
@@ -87,10 +89,9 @@ public class main {
       sightPtr++;
     }
 
-	if ( forwardFirstCheck == 1 && forwardSecondCheck == 1 ) {
+	if ( forwardFirstCheck == 1 && forwardSecondCheck == 1 )
 		return true;
-  	}
-
+  	
 	return false;
   }
 }
