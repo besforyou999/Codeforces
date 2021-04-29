@@ -29,27 +29,7 @@ public class main {
 				}
 
 			}
-			/*
-			int oddListLength = oddList.size();
-			int evenListLength = evenList.size();
-
-			int minLength = Math.min(oddListLength, evenListLength);
-			int i;
-			for (i = 0; i < minLength ; i++ ) {
-				System.out.print(oddList.get(i) + " " + evenList.get(i) + " ");
-			}
-		
-			if (oddListLength > evenListLength ) {
-				for ( ; i < oddListLength ; i++ ) {
-					System.out.print(oddList.get(i));
-				}
-			} else if ( oddListLength < evenListLength ) {
-				for ( ; i < evenListLength ; i++ ) {
-					System.out.print(evenList.get(i));
-				}
-			}
-		*/
-
+			
 			for (int i = 0; i < evenList.size(); i++ ) {
 				System.out.print(evenList.get(i) + " ");
 			}
