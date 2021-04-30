@@ -13,22 +13,17 @@ public class main {
 			
 			n = sc.nextInt();
 
-			int ri[] = new int[n];
-			int count1 = 0, count2 = 0;
+			int count1 = 0;
 
 			for (int i = 0; i < n ; i++) {
-				ri[i] = sc.nextInt();
-				if (ri[i] == 1 || ri[i] == 3 ) {
+				int temp = sc.nextInt();
+				if ( temp == 1 || temp == 3 ) 
 					count1++;
-				} else {
-					count2++;
-				}
 			}
 			
 			System.out.println(count1);
 				
 		}		
 		
-
 	}
 }
